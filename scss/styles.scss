@@ -1,0 +1,22 @@
+@import 'componentes/header';
+@import 'componentes/footer';
+@import 'componentes/banner';
+@import 'componentes/tecno';
+@import 'componentes/registro';
+@import 'componentes/producto';
+@import 'componentes/formAgregar.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wspIcon{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2000;
+    border-radius: 80%;
+}

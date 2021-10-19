@@ -1,0 +1,50 @@
+.tecnologias{
+
+    h2{
+        margin-top: 3em;
+        text-align: center;
+        text-transform: uppercase;
+        &::after{
+            height: 5px;
+            top: 10px;
+            width: 10%;
+            max-width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            content: "";
+            display: block;
+            position: relative;
+            background-color: rgb(255, 0, 0);
+        }
+    }
+
+    .tecnoDispo{
+
+        height: 500px;
+        margin-top: 2em;
+        text-align: center;
+
+        a{
+            text-decoration: none;
+        }
+
+        h3{
+            color: #fff;
+            position: relative;
+            top: -145px;
+        }
+
+        img{
+            width: 60%;
+            height: 50%;
+            transition: all 1s;
+        }
+    }
+}
+
+.tecnoDispo:hover img{
+        -webkit-transform: rotateY(180deg);
+        -webkit-transform-style: preserve-3d;
+        transform: rotateY(180deg);
+        transform-style: preserve-3d;
+}
