@@ -11,6 +11,7 @@ class Usuarios {
         this.contra = contra;
 
     }
+    
 }
 
 let usuariosRegistrados = [];
@@ -24,7 +25,7 @@ const crearUsuario = () => {
     })
 
     let confirmarRegistro = confirm("¿Los datos ingresados son correctos?")
-    
+
     if (confirmarRegistro){
         usuariosRegistrados.push(usuarioNuevo)
         localStorage.setItem("lista de Usuarios", JSON.stringify(usuariosRegistrados))

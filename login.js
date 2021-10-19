@@ -1,4 +1,3 @@
-
 let ingreso = document.getElementById("btnLogin");
 
 ingreso.addEventListener("click", (e) => {
@@ -7,13 +6,15 @@ ingreso.addEventListener("click", (e) => {
 })
 
 const ingresar = () => {
-    
+
     let user = document.getElementById("userLogin").value;
     let pass = document.getElementById("passLogin").value;
 
-    if (user === "uri21199" && pass === "coderhouse"){
+    if (user === "uri21199" && pass === "coderhouse") {
+
         let deseaAgregar = confirm("¿Desea agregar productos?")
-        if (deseaAgregar){
+
+        if (deseaAgregar) {
             document.getElementById("inputs").innerHTML += `
             <form id="formProducto" class="agregarProducto">
             <input type="text" placeholder="Nombre del producto" id="nombreProducto" class="inputProducto">
@@ -23,7 +24,15 @@ const ingresar = () => {
             <input type="number" placeholder="Stock del producto" id="stockProducto" class="inputProducto">
             <button id="btnAgregar" class="btnProducto">Agregar producto</button>
             </form>`
+
+
         }
+    } else {
+        alert("Bienvenido a la tienda.")
     }
+
+
 }
+
+
 
