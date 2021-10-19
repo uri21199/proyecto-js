@@ -11,6 +11,7 @@ class Usuarios {
         this.contra = contra;
 
     }
+
     
 }
 

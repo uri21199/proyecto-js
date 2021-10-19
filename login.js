@@ -1,9 +1,31 @@
 let ingreso = document.getElementById("btnLogin");
 
-ingreso.addEventListener("click", (e) => {
-    e.preventDefault()
-    ingresar();
-})
+let listaDeProductos = [];
+
+class ProductoNuevo {
+
+    constructor({
+        nombre,
+        url,
+        marca,
+        precio,
+        stock,
+    }) {
+        this.nombre = nombre;
+        this.url = url;
+        this.marca = marca;
+        this.precio = precio;
+        this.stock = stock;
+
+    }
+}
+
+
+            
+
+
+
+
 
 const ingresar = () => {
 
@@ -22,8 +44,31 @@ const ingresar = () => {
             <input type="text" placeholder="Marca del producto" id="marcaProducto" class="inputProducto">
             <input type="number" placeholder="Precio del producto" id="precioProducto" class="inputProducto">
             <input type="number" placeholder="Stock del producto" id="stockProducto" class="inputProducto">
-            <button id="btnAgregar" class="btnProducto">Agregar producto</button>
+            <button id="btnAgregar" class="btnProducto" data-bs-toggle="modal" data-bs-target="#modal">Agregar producto</button>
             </form>`
+
+            const crearProducto = () => {
+
+                let productoCreado = new ProductoNuevo({
+                    nombre: document.getElementById("nombreProducto").value,
+                    url: document.getElementById("urlProducto").value,
+                    marca: document.getElementById("marcaProducto").value,
+                    precio: document.getElementById("precioProducto").value,
+                    stock: document.getElementById("stockProducto").value,
+                })
+
+                listaDeProductos.push(productoCreado)
+                localStorage.setItem("Productos", JSON.stringify(listaDeProductos))
+            }
+
+
+            let botonDeAgregar = document.getElementById("btnAgregar");
+
+            botonDeAgregar.addEventListener("click", (e) => {
+                e.preventDefault();
+                crearProducto();
+            })
+
 
 
         }
@@ -31,8 +76,10 @@ const ingresar = () => {
         alert("Bienvenido a la tienda.")
     }
 
-
 }
 
 
-
+ingreso.addEventListener("click", (e) => {
+    e.preventDefault()
+    ingresar();
+})
