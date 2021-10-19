@@ -1,6 +1,10 @@
+
+
+//Ingresar usuario
+
 let ingreso = document.getElementById("btnLogin");
 
-let listaDeProductos = [];
+//Clase de productos nuevos
 
 class ProductoNuevo {
 
@@ -20,13 +24,11 @@ class ProductoNuevo {
     }
 }
 
-
-            
-
-
+//Array de productos agregados
+let listaDeProductos = [];
 
 
-
+//Función al ingresar
 const ingresar = () => {
 
     let user = document.getElementById("userLogin").value;
@@ -47,6 +49,7 @@ const ingresar = () => {
             <button id="btnAgregar" class="btnProducto" data-bs-toggle="modal" data-bs-target="#modal">Agregar producto</button>
             </form>`
 
+            //Función para crear productos nuevos en base a lo agregado anteriormente
             const crearProducto = () => {
 
                 let productoCreado = new ProductoNuevo({
@@ -64,6 +67,7 @@ const ingresar = () => {
 
             let botonDeAgregar = document.getElementById("btnAgregar");
 
+            //Evento para agregar el producto en base al botón que se agrego a traves de innerHTML
             botonDeAgregar.addEventListener("click", (e) => {
                 e.preventDefault();
                 crearProducto();
@@ -78,7 +82,7 @@ const ingresar = () => {
 
 }
 
-
+//Evento al ingresar
 ingreso.addEventListener("click", (e) => {
     e.preventDefault()
     ingresar();

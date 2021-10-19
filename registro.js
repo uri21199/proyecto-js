@@ -1,4 +1,4 @@
-
+//Clase de usuarios
 class Usuarios {
 
     constructor({
@@ -15,8 +15,11 @@ class Usuarios {
     
 }
 
+//Array de usuarios
 let usuariosRegistrados = [];
 
+
+//Función para crear un usuario nuevo y guardarlo
 const crearUsuario = () => {
     
     let usuarioNuevo = new Usuarios ({
@@ -34,6 +37,8 @@ const crearUsuario = () => {
 
 }
 
+
+//Evento en el botón de registrarse
 document.getElementById("registrar").addEventListener("click", (e) =>{
     console.log(usuariosRegistrados)
     e.preventDefault();
