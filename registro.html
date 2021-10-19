@@ -50,17 +50,17 @@
     </header>
 
     <!--Registros-->
-    <form class="formulario">
+    <div class="formulario">
         <h1>Registrate</h1>
-        <div class="contenedor container-fluid">
+        <form class="contenedor container-fluid" id="formUser">
             <input type="text" placeholder="Nombre completo" class="inputForm" id="nombreUser">
             <input type="text" placeholder="Correo electrónico" class="inputForm" id="mailUser">
             <input type="password" placeholder="Contraseña" class="inputForm" id="contraUser">
             <button class="button" id="registrar">Registrarse</button>
             <p>Al registrarte aceptas nuestros <a href="#" class="link">Términos y Condiciones.</a></p>
             <p>¿Ya tienes una cuenta? <a href="login.html" class="link">Iniciar Sesión</a></p>
-        </div>
-    </form>
+        </form>
+    </div>
 
 
     <div id="tabla">
@@ -120,16 +120,10 @@
     </footer>
 
 
-    <script src="app.js"></script>
-
     <!-- CDN BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script src="registro.js"></script>
 </body>
 
 </html>
