@@ -14,10 +14,11 @@ const ligthMode = () => {
     localStorage.setItem("theme", "light")
 }
 
-document.querySelector("#dmode").addEventListener("click", () => {
+
+$("dmode").on("click", () => {
     if (localStorage.getItem("theme") === "dark") {
         ligthMode()
     } else {
         darkMode()
-    }
+    }   
 })
