@@ -1,3 +1,9 @@
+/**********VARIABLES *********** */
+
+//Array de usuarios
+let usuariosRegistrados = [];
+
+
 //Clase de usuarios
 class Usuarios {
 
@@ -9,15 +15,23 @@ class Usuarios {
         this.nombre = nombre;
         this.mail = mail;
         this.contra = contra;
-
     }
-
-    
 }
 
-//Array de usuarios
-let usuariosRegistrados = [];
+/**********FUNCIONES *********** */
 
+
+//Función para verificar si el usuario existe
+const verificarUsuario = () => {
+    let usuarioIngresado = document.getElementById("mailUser").value;
+    let usuarioEncontrado = usuariosRegistrados.find(usuario => usuario.mail == usuarioIngresado)
+    if (usuarioEncontrado != undefined){
+        alert("El correo electrónico ya se encuentra registrado.");
+    } else {
+        crearUsuario();
+        console.log(usuariosRegistrados);
+    }
+}
 
 //Función para crear un usuario nuevo y guardarlo
 const crearUsuario = () => {
@@ -37,10 +51,22 @@ const crearUsuario = () => {
 
 }
 
+//Función para verificar los usuarios ya registrados y seguir trabajando en el mismo array
+const verificarStorage = () => {
+    let usuariosGuardados = JSON.parse(localStorage.getItem("lista de Usuarios"))
+    if (usuariosGuardados != null){
+        usuariosRegistrados = usuariosGuardados
+    } 
+}
+
+
+/**********EVENTOS *********** */
 
 //Evento en el botón de registrarse
 document.getElementById("registrar").addEventListener("click", (e) =>{
-    console.log(usuariosRegistrados)
     e.preventDefault();
-    crearUsuario();
+    verificarUsuario();
 })
+
+
+verificarStorage();
