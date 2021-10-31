@@ -1,0 +1,42 @@
+[
+    {
+        "nombre" : "lautaro",
+        "precio" : "3100",
+        "id" : 1,
+        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
+        "stock": "21"
+    },
+
+    {
+        "nombre" : "uriel",
+        "precio" : "2400",
+        "id" : 2,
+        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
+        "stock": "25"
+    },
+
+    {
+        "nombre" : "adrian",
+        "precio" : "1200",
+        "id" : 3,
+        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
+        "stock": "12"
+    },
+
+    {
+        "nombre" : "pedro",
+        "precio" : "4230",
+        "id" : 4,
+        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
+        "stock": "28"
+    },
+
+    {
+        "nombre" : "juan",
+        "precio" : "4000",
+        "id" : 5,
+        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
+        "stock": "20"
+    }
+
+]

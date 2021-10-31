@@ -1,8 +1,12 @@
-
+/**********VARIABLES *********** */
 
 //Ingresar usuario
 
 let ingreso = document.getElementById("btnLogin");
+
+//Array de productos agregados
+let listaDeProductos = [];
+
 
 //Clase de productos nuevos
 
@@ -24,9 +28,10 @@ class ProductoNuevo {
     }
 }
 
-//Array de productos agregados
-let listaDeProductos = [];
 
+
+
+/**********FUNCIONES *********** */
 
 //Función al ingresar
 const ingresar = () => {
@@ -46,12 +51,12 @@ const ingresar = () => {
             <input type="text" placeholder="Marca del producto" id="marcaProducto" class="inputProducto">
             <input type="number" placeholder="Precio del producto" id="precioProducto" class="inputProducto">
             <input type="number" placeholder="Stock del producto" id="stockProducto" class="inputProducto">
-            <button id="btnAgregar" class="btnProducto" data-bs-toggle="modal" data-bs-target="#modal">Agregar producto</button>
+            <button id="btnAgregar" class="btnProducto">Agregar producto</button>
             </form>`
 
             //Función para crear productos nuevos en base a lo agregado anteriormente
             const crearProducto = () => {
-
+                
                 let productoCreado = new ProductoNuevo({
                     nombre: document.getElementById("nombreProducto").value,
                     url: document.getElementById("urlProducto").value,
@@ -60,10 +65,16 @@ const ingresar = () => {
                     stock: document.getElementById("stockProducto").value,
                 })
 
-                listaDeProductos.push(productoCreado)
+                if (verificarProducto(productoCreado.nombre, productoCreado.marca) === undefined) {
+                    listaDeProductos.push(productoCreado)
+                    alert("Producto agregado")
+                } else {
+                    alert("Producto ya existente")
+                }
+
                 localStorage.setItem("Productos", JSON.stringify(listaDeProductos))
             }
-
+            
 
             let botonDeAgregar = document.getElementById("btnAgregar");
 
@@ -82,8 +93,28 @@ const ingresar = () => {
 
 }
 
+//Funcion para verificar storage
+const verificarStorage = () => {
+    if (localStorage.getItem("Productos") === null) {
+        localStorage.setItem("Productos", JSON.stringify(listaDeProductos))
+    } else {
+        listaDeProductos = JSON.parse(localStorage.getItem("Productos"))
+    }  
+}
+
+//Funcion para verificar si ya existe el producto
+const verificarProducto = (nombre, marca) => {
+    let producto = listaDeProductos.find(producto => producto.nombre === nombre && producto.marca === marca)
+    return producto
+}
+
+
+/**********EVENTOS *********** */
+
 //Evento al ingresar
 ingreso.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
     ingresar();
 })
+
+verificarStorage();
