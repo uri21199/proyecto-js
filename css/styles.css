@@ -371,6 +371,35 @@
   background-color: #2183a2;
 }
 
+.carrito {
+  margin-top: 120px;
+}
+.carrito h2 {
+  text-align: center;
+}
+.carrito .mas,
+.carrito .menos {
+  width: 15px;
+  margin: 0 13px;
+}
+.carrito th {
+  text-align: center;
+}
+.carrito td {
+  padding: 10px 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.carrito .productoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carrito .productoInfo img {
+  width: 70px;
+  height: 70px;
+}
+
 .agregarProducto {
   padding: 15px;
   margin: 25px auto;

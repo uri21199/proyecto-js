@@ -1,8 +1,4 @@
-/**********VARIABLES *********** */
-
-//Array de usuarios
-let usuariosRegistrados = [];
-
+/**********CLASES *********** */
 
 //Clase de usuarios
 class Usuarios {
@@ -17,6 +13,13 @@ class Usuarios {
         this.contra = contra;
     }
 }
+
+
+/**********VARIABLES *********** */
+
+//Array de usuarios
+let usuariosRegistrados = [];
+
 
 /**********FUNCIONES *********** */
 

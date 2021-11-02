@@ -26,7 +26,7 @@
                 <p>6 y 12 cuotas sin interés</p>
                 <p>Primer cambio gratis</p>
         </div>
-        <div class="headerBajo  header2">
+        <div class="headerBajo">
             <div class="logo">
                 <a href="index.html">
                     <img src="images/iconos/icono.png" alt="Icono de Tienda Marvel">
@@ -46,37 +46,44 @@
         </div>
     </header>
 
-<!--Registros-->
-<form class="formulario">
-    <h1>Contacto</h1>
-    <div class="contenedor container-fluid">
-        <div class="inputContenedor">
-            <input type="text" placeholder="Correo electrónico" class="inputForm">
-        </div>
-        <div class="inputContenedor">
-            <textarea name="textarea" id="textarea" class="inputForm" cols="30" rows="5" placeholder="Ingrese su mensaje"></textarea>
-        </div>
-        <div class="inputContenedor">
-            <input type="submit" value="Enviar" class="button">
-        </div>  
-    </div>
-</form>
+<!-- Carrito de compras -->
 
+<div class="carrito">
+    <h2>Resumen de compras</h2>
+    <table id="resumen">
+        <thead>
+            <tr class="titulos">
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio individual</th>
+                <th>Subtotal</th>
+            </tr>   
+        </thead>
+        <tbody id="tabla">
 
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
 
 <!-- Footer -->
 <!-- Email -->
 <section class="difusionRedes">
     <h2>Seguinos en nuestras redes</h2>
-    <form action="#" class="suscripcionEmail col-md-12">
-        <input type="email" class="input-large" placeholder="Suscribite a nuestro newsletter">
+    <form class="suscripcionEmail col-md-12">
+        <input type="email" class="input-large" placeholder="Ingresa tu mail para suscribirte">
         <button>Suscribirme</button>
     </form>
-    <ul class="redes row">
-        <li class="col-md-3"><a href="#"><img src="images/iconos/facebook.png" alt="Icono de Facebook"></a></li>
-        <li class="col-md-3"><a href="#"><img src="images/iconos/instagram.png" alt="Icono de Instagram"></a></li>
-        <li class="col-md-3"><a href="#"><img src="images/iconos/gmail.png" alt="Icono de Gmail"></a></li>
-        <li class="col-md-3"><a href="#"><img src="images/iconos/facebook.png" alt="Icono de Facebook"></a></li>
+    <ul class="redes">
+        <li><a href="#"><img src="images/iconos/facebook.png" alt="Icono de Facebook"></a></li>
+        <li><a href="#"><img src="images/iconos/instagram.png" alt="Icono de Instagram"></a></li>
+        <li><a href="#"><img src="images/iconos/gmail.png" alt="Icono de Gmail"></a></li>
+        <li><a href="#"><img src="images/iconos/facebook.png" alt="Icono de Facebook"></a></li>
     </ul>
 </section>
 
@@ -91,7 +98,6 @@
             <li><a href="producto.html">Celulares</a></li>
             <li><a href="producto.html">Computadoras</a></li>
             <li><a href="producto.html">Accesorios</a></li>
-
         </ul>
         <ul class="atencion">
             <li class="ulTitulo">ATENCIÓN AL CLIENTE</li>
@@ -118,8 +124,13 @@
 
 
 <!-- CDN BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="./js/carrito.js"></script>
 
 </body>
 </html>
