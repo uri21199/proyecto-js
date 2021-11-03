@@ -1,42 +1,37 @@
 [
     {
-        "nombre" : "lautaro",
-        "precio" : 3100,
+        "nombre" : "Samsung S21",
+        "precio" : "114999",
         "id" : "1",
-        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
-        "stock": "21"
+        "url" : "https://medias.musimundo.com/medias/00320174-140897-140897-01-140897-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w0MjY3OHxpbWFnZS9qcGVnfGg2YS9oMmEvMTAzMTU0NzgzMDI3NTAvMDAzMjAxNzQtMTQwODk3LTE0MDg5N18wMS0xNDA4OTdfMDEuanBnX3NpemU1MTV8YzljODUwZTlmYWNiZDllNTUxZjIxODVlMTQyMjU4OTYwMWY2M2FmYmU4ZDhlNzM3NDliMWU0ZDFmZWMzYTFjMw"
     },
 
     {
-        "nombre" : "uriel",
-        "precio" : 2400,
+        "nombre" : "Motorola Edge 20 Pro",
+        "precio" : "109999",
         "id" : "2",
-        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
-        "stock": "25"
+        "url" : "https://images.fravega.com/f300/6f086c336b91239b827b31162edcd7d4.jpg.webp"
     },
 
     {
-        "nombre" : "adrian",
-        "precio" : 1200,
+        "nombre" : "Notebook HP Pavilion",
+        "precio" : "119999",
         "id" : "3",
-        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
-        "stock": "12"
+        "url" : "https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/3/1/310D7LA-1_T1632518323.png"
     },
 
     {
-        "nombre" : "pedro",
-        "precio" : 4230,
+        "nombre" : "Notebook Acer Nitro Gamer",
+        "precio" : "136999",
         "id" : "4",
-        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
-        "stock": "28"
+        "url" : "https://images.fravega.com/f300/2217d872d917af971db6e204ebcddf65.jpg.webp"
     },
 
     {
-        "nombre" : "juan",
-        "precio" : 4000,
+        "nombre" : "Auricular Gamer Turtle Beach",
+        "precio" : "10199",
         "id" : "5",
-        "url" : "https://www.remerasya.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/r/e/remera_amarilla_lisa_1.jpg",
-        "stock": "20"
+        "url" : "https://medias.musimundo.com/medias/00287149-138914-138914-01-138914-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1ODAxMHxpbWFnZS9qcGVnfGgzYi9oOGEvMTAyOTkyMjE0MDk4MjIvMDAyODcxNDktMTM4OTE0LTEzODkxNF8wMS0xMzg5MTRfMDEuanBnX3NpemU1MTV8NjA2YjBhMGE1ZjJlMTUwMGI3YmNmM2U3OWM5MGVkNjM1Y2NkZTEyZDQ3ODFiNWM3NTUwNGU1NGJiOThiYjExZg"
     }
 
 ]

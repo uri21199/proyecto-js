@@ -41,9 +41,11 @@
         button {
             text-align: center;
             font-size: 24px;
-            color: #fff;
+            color: rgb(0, 0, 0);
+            background-color: #fff;
             width: 100%;
             outline: none;
+            border: none;
             cursor: pointer;
             margin-top: 5px;
         }
@@ -61,7 +63,10 @@
 
     margin-top: 120px;
 
-    h2{text-align: center;}
+    h2 {
+        text-align: center;
+    }
+
 
     .mas,
     .menos {
@@ -79,11 +84,11 @@
         text-align: center;
     }
 
-    .productoInfo{
+    .productoInfo {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
         img {
             width: 70px;
             height: 70px;

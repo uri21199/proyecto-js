@@ -9,13 +9,11 @@ class ProductoNuevo {
         url,
         id,
         precio,
-        stock,
     }) {
         this.nombre = nombre;
         this.url = url;
         this.id = id;
         this.precio = precio;
-        this.stock = stock;
 
     }
 }
@@ -51,7 +49,6 @@ const ingresar = () => {
             <input type="text" placeholder="URL del producto" id="urlProducto" class="inputProducto">
             <input type="text" placeholder="id del producto" id="idProducto" class="inputProducto">
             <input type="number" placeholder="Precio del producto" id="precioProducto" class="inputProducto">
-            <input type="number" placeholder="Stock del producto" id="stockProducto" class="inputProducto">
             <button id="btnAgregar" class="btnProducto">Agregar producto</button>
             </form>`
 
@@ -63,7 +60,6 @@ const ingresar = () => {
                     url: document.getElementById("urlProducto").value,
                     id: document.getElementById("idProducto").value,
                     precio: document.getElementById("precioProducto").value,
-                    stock: document.getElementById("stockProducto").value,
                 })
 
                 if (verificarProducto(productoCreado.nombre, productoCreado.id) === undefined) {

@@ -26,11 +26,10 @@ const crear = dataJSON => {
         let galeria = document.getElementById('productosAgregados');
 
         galeria.innerHTML +=
-            `<div class="content col-md-3 mx-5 mt-3">
+            `<div class="content col-md-3 mx-5 mt-3 producto">
         <img src="${producto.url}">
-        <h3 id="${producto.nombre}">${producto.nombre}</h3>
-        <h6 id= "${producto.precio}">${producto.precio}</h6>
-        <p>Stock disponible:${producto.stock}</p>
+        <h3 class="productoNombre" id="${producto.nombre}">${producto.nombre}</h3>
+        <h6 class="productoPrecio">$${producto.precio}</h6>
         <button class="comprar" data-id="${producto.id}">Comprar</button>
         </div>
     `
@@ -45,11 +44,10 @@ const mostrarProductos = () => {
         productosAgregados.forEach(producto => {
             let galeria = document.getElementById('productosAgregados');
             galeria.innerHTML +=
-            `<div class="content col-md-3 mx-5 mt-3">
+            `<div class="content col-md-3 mx-5 mt-3 producto">
             <img src="${producto.url}">
-            <h3 id="${producto.nombre}">${producto.nombre}</h3>
-            <h6 id= "${producto.precio}">${producto.precio}</h6>
-            <p>Stock disponible:${producto.stock}</p>
+            <h3 class="productoNombre" id="${producto.nombre}">${producto.nombre}</h3>
+            <h6 class="productoPrecio">${producto.precio}</h6>
             <button class="comprar" data-id="${producto.id}">Comprar</button>
             </div>`
 
@@ -72,8 +70,7 @@ const administrarCarrito = (objeto) =>{
     const productoComprado ={
         id: objeto.querySelector('.comprar').dataset.id,
         nombre: objeto.querySelector('h3').textContent,
-        precio: objeto.querySelector('h6').textContent,
-        stock: objeto.querySelector('p').textContent,
+        precio: parseInt(objeto.querySelector('h6').textContent.replace('$', '')),
         url: objeto.querySelector('img').src,
         cantidad: 1
     }
@@ -86,6 +83,9 @@ const administrarCarrito = (objeto) =>{
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
     
+
+
+
 }
 
 

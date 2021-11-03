@@ -361,9 +361,11 @@
 .gallery .content button {
   text-align: center;
   font-size: 24px;
-  color: #fff;
+  color: black;
+  background-color: #fff;
   width: 100%;
   outline: none;
+  border: none;
   cursor: pointer;
   margin-top: 5px;
 }
