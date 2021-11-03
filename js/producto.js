@@ -84,8 +84,6 @@ const administrarCarrito = (objeto) =>{
     localStorage.setItem('carrito', JSON.stringify(carrito));
     
 
-
-
 }
 
 

@@ -18,13 +18,9 @@ const pintarCarrito = () => {
         <img src="${producto.url}" alt="${producto.nombre}">
         ${producto.nombre}
         </td>
-        <td class="cantidad">
-        <button class="menos btn-danger">-</button>
-        ${producto.cantidad}
-        <button class="mas btn-primary">+</button>
-        </td>
+        <td class="cantidad">${producto.cantidad}</td>
         <td>$${producto.precio}</td>
-        <td>$${producto.cantidad * producto.precio}</td>
+        <td>$${producto.cantidad * producto.precio} (${producto.cantidad })</td>
     </tr> 
         `
     });
@@ -47,11 +43,22 @@ const cambiarPie = () => {
     } else {
         pie.innerHTML += `                
         <td>Compra final</td>
-        <td><button class="btn-danger">Vaciar carrito</button></td>
-        <td><button class ="btn-primary">Completar compra</button></td>
+        <td><button class="btn-danger vaciar">Vaciar carrito</button></td>
+        <td><button class ="btn-primary completar">Completar compra</button></td>
         <td>Total: $${total}</td>`;
+
+        document.querySelector('.vaciar').addEventListener('click', () =>{
+            localStorage.removeItem('carrito');
+            location.reload();
+        })
+
+        document.querySelector('.completar').addEventListener('click', () =>{
+            localStorage.removeItem('carrito');
+            location.reload();
+        })
     };
 }
+
 
 /**********EVENTOS *********** */
 

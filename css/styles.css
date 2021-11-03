@@ -386,6 +386,7 @@
 }
 .carrito th {
   text-align: center;
+  padding: 5px;
 }
 .carrito td {
   padding: 10px 50px;
