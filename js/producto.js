@@ -25,14 +25,38 @@ const crear = dataJSON => {
 
         let galeria = document.getElementById('productosAgregados');
 
-        galeria.innerHTML +=
-            `<div class="content col-md-3 mx-5 mt-3 producto">
-        <img src="${producto.url}">
-        <h3 class="productoNombre" id="${producto.nombre}">${producto.nombre}</h3>
-        <h6 class="productoPrecio">$${producto.precio}</h6>
-        <button class="comprar" data-id="${producto.id}">Comprar</button>
-        </div>
-    `
+        //crear div
+        let div = document.createElement('div');
+        div.classList.add('content', 'col-md-3', 'mx-5', 'mt-3', 'producto');
+
+        //crear imagen
+        let img = document.createElement('img');
+        img.src = producto.url;
+
+        //crear h3
+        let h3 = document.createElement('h3');
+        h3.classList.add('productoNombre');
+        h3.textContent = producto.nombre;
+
+        //crear h6
+        let h6 = document.createElement('h6');
+        h6.classList.add('productoPrecio');
+        h6.textContent = `$${producto.precio}`;
+
+        //crear boton
+        let button = document.createElement('button');
+        button.classList.add('comprar');
+        button.dataset.id = producto.id;
+        button.textContent = 'Comprar';
+
+        //agregar a div
+        div.appendChild(img);
+        div.appendChild(h3);
+        div.appendChild(h6);
+        div.appendChild(button);
+
+        //agregar a galeria
+        galeria.appendChild(div);
     });
 }
 
@@ -43,14 +67,39 @@ const mostrarProductos = () => {
     if (productosAgregados.length > 0) {
         productosAgregados.forEach(producto => {
             let galeria = document.getElementById('productosAgregados');
-            galeria.innerHTML +=
-            `<div class="content col-md-3 mx-5 mt-3 producto">
-            <img src="${producto.url}">
-            <h3 class="productoNombre" id="${producto.nombre}">${producto.nombre}</h3>
-            <h6 class="productoPrecio">${producto.precio}</h6>
-            <button class="comprar" data-id="${producto.id}">Comprar</button>
-            </div>`
 
+            //crear div
+            let div = document.createElement('div');
+            div.classList.add('content', 'col-md-3', 'mx-5', 'mt-3', 'producto');
+
+            //crear imagen
+            let img = document.createElement('img');
+            img.src = producto.url;
+
+            //crear h3
+            let h3 = document.createElement('h3');
+            h3.classList.add('productoNombre');
+            h3.textContent = producto.nombre;
+
+            //crear h6
+            let h6 = document.createElement('h6');
+            h6.classList.add('productoPrecio');
+            h6.textContent = `$${producto.precio}`;
+
+            //crear boton
+            let button = document.createElement('button');
+            button.classList.add('comprar');
+            button.dataset.id = producto.id;
+            button.textContent = 'Comprar';
+
+            //agregar a div
+            div.appendChild(img);
+            div.appendChild(h3);
+            div.appendChild(h6);
+            div.appendChild(button);
+
+            //agregar a galeria
+            galeria.appendChild(div);
         });
     } else {
         console.log('El administrador no ha agregado otros productos.');
