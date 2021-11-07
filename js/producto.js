@@ -15,6 +15,7 @@ const fetchData = async () => {
         let dataJSON = await data.json();
         crear(dataJSON);
     } catch (error) {
+        document.getElementById('productosAgregados').innerHTML = '<h4>Error al cargar los productos</h4>';
         console.log(error);
     }
 }

@@ -7,3 +7,5 @@ $(".banner h1").animate({
 }, 1000)
 
 $(".banner a").slideUp(1000).slideDown(1000)
+
+//
